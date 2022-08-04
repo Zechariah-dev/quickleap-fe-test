@@ -32,6 +32,7 @@ export default function Input({ label, type = "text", ...props }) {
 
             field.onChange(e);
           }}
+          style={{ border: meta.error && meta.touched && "1px solid red" }}
         />
         {check && (
           <button

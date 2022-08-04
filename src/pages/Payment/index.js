@@ -35,7 +35,7 @@ export default function PaymentForm() {
     phoneNumber: Yup.string()
       .required("phone number is required")
       .matches(
-        /((^090)([1-9]))|((^070)([1-9]))|((^080)([2-9]))|((^081)([0-9]))(\d{7})|((\+?)(234)([7-9])([0-1])([1-9]))(\d{7})/,
+        /((^090)([1-9]))(\d{7})|((^070)([1-9]))(\d{7})|((^080)([2-9]))(\d{7})|((^081)([0-9]))(\d{7})|((\+?)(234)([7-9])([0-1])([1-9]))(\d{7})/,
         "invalid format"
       ),
     password: Yup.string()
@@ -83,7 +83,7 @@ export default function PaymentForm() {
               </div>
               <div className="form-control">
                 <Input label="Email" name="email" />
-                <Input label="Phone Number" name="phoneNumber" />
+                <Input label="Phone Number" name="phoneNumber" maxLength={14} />
               </div>
               <div className="form-control">
                 <Input
@@ -102,7 +102,12 @@ export default function PaymentForm() {
                 />
               </div>
               <div>
-                <Input label="Card Number" name="cardNumber" maxLength={19} />
+                <Input
+                  label="Card Number"
+                  name="cardNumber"
+                  maxLength={19}
+                  pattern="[0-9]"
+                />
               </div>
               <div className="form-control">
                 <Input label="Expiry Date" name="expiryDate" />
@@ -114,7 +119,11 @@ export default function PaymentForm() {
                   pattern="[0-9]{4}"
                 />
               </div>
-              <button className="submit-btn" type="submit">
+              <button
+                className="submit-btn"
+                type="submit"
+                disabled={!(props.dirty && props.isValid)}
+              >
                 Submit
               </button>
             </Form>

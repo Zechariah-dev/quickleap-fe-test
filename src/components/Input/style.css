@@ -29,6 +29,6 @@
     background-color: var(--primary-color);
 }
 
-@media screen and (max-width: 992px) {
-
+.input:invalid {
+    border: 1px solid red;
 }
