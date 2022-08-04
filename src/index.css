@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+
+:root {
+  --primary-color: rgb(161, 148, 235);
+  --secondary-color: rgb(109, 95, 184);
+  --white: rgb(255, 255, 255)
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
