@@ -14,7 +14,9 @@ export default function Input({ label, type = "text", ...props }) {
 
   return (
     <div className="input-container">
-      <label className="label">{label}</label>
+      <label className="label" for={name}>
+        {label}
+      </label>
       <div style={{ display: "inline-flex" }}>
         <input
           {...field}

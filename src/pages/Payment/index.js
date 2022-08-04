@@ -1,9 +1,10 @@
+/* eslint-disable */
 import { Formik, Form } from "formik";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import Input from "../../components/Input";
-import "./payment.css";
+import "./style.css";
 
 export default function PaymentForm() {
   const navigate = useNavigate();
