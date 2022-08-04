@@ -106,7 +106,6 @@ export default function PaymentForm() {
                   label="Card Number"
                   name="cardNumber"
                   maxLength={19}
-                  pattern="[0-9]"
                 />
               </div>
               <div className="form-control">
